@@ -11,5 +11,10 @@ sub run {
     say "    $_" for @out;
 }
 
-run "curl -LO ftp://xmlsoft.org/libxml2/libxml2-2.9.1.tar.gz";
+run "curl -LO ftp://xmlsoft.org/libxml2/libxml2-2.9.1.tar.gz; true";
+run "ls -al";
+run "curl -O ftp://xmlsoft.org/libxml2/libxml2-2.9.1.tar.gz; true";
+run "ls -al";
+run "wget ftp://xmlsoft.org/libxml2/libxml2-2.9.1.tar.gz; true";
+run "ls -al";
 
