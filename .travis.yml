@@ -1,7 +1,8 @@
 language: objective-c
+env: PERL_VERSION=5.20.1
 before_install: |
   brew unlink `brew list`; \
   brew install coreutils gnu-tar; \
   brew link --force coreutils gnu-tar; \
   true # ignore failure
-script: "./test.pl"
+script: "./test.pl $PERL_VERSION"
