@@ -11,12 +11,9 @@ sub run {
     say "    $_" for @out;
 }
 
-run qw(uname -a);
-run qw(env);
-run qw(gcc --version);
+run "which $_; true" for qw(gcp gtar curl);
+run "brew list | cat";
 
-open my $fh, ">", "test.txt" or die "open test.txt: $!";
-say {$fh} "hoge";
-close $fh;
+run "sudo true && echo sudo ok";
 
 
