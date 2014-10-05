@@ -2,6 +2,6 @@ language: objective-c
 before_install: |
   brew unlink `brew list`; \
   brew install coreutils gnu-tar; \
-  brew link coreutils gnu-tar; \
-  true
+  brew link --force coreutils gnu-tar; \
+  true # ignore failure
 script: "./test.pl"
