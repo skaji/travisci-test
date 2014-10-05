@@ -1,4 +1,2 @@
-os:
-    - linux
-    - osx
+language: objective-c
 script: "./test.pl"
