@@ -1,0 +1,4 @@
+os:
+    - linux
+    - osx
+script: "./test.pl"
