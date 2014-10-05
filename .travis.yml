@@ -10,7 +10,7 @@ deploy:
   provider: releases
   api_key:
     secure: W2FHNUZALzp8hga+f86pNpQY9mBTa8tCHlmzO+2sSQHgt5Br9n2IyY6TRwU8ImtRLX6CecxcojbPM6fnRmp6BKE1SRLpr11b9UWn8rRLA6R8MaNrgquf9J5+a9lWpqnvzITjBaYWj1OFlwyEi2YV9ep1xCStbJPCUPWAs9YQpcE=
-  file: release.txt
+  file: release-$PERL_VERSION.txt
   skip_cleanup: true
   on:
     repo: shoichikaji/travisci-test
