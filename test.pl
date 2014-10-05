@@ -11,11 +11,5 @@ sub run {
     say "    $_" for @out;
 }
 
-run "which $_; true" for qw(gcp gtar curl);
-run "brew list | cat";
-
-run "sudo mkdir /opt/perl";
-run "sudo chown $ENV{USER}:staff /opt/perl";
-run "ls -al /opt/perl";
-
+run "curl -LO ftp://xmlsoft.org/libxml2/libxml2-2.9.1.tar.gz";
 
