@@ -1,2 +1,3 @@
 language: objective-c
+before_install: "brew instal coreutils gnu-tar";
 script: "./test.pl"

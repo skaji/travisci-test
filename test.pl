@@ -14,6 +14,8 @@ sub run {
 run "which $_; true" for qw(gcp gtar curl);
 run "brew list | cat";
 
-run "sudo true && echo sudo ok";
+run "sudo mkdir /opt/perl";
+run "sudo chown $ENV{USER}:staff /opt/perl";
+run "ls -al /opt/perl";
 
 
