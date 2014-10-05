@@ -14,4 +14,4 @@ deploy:
   skip_cleanup: true
   all_branches: true
   on:
-    repo: shoichikaji/travisci-test
+    tags: true
