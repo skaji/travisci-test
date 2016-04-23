@@ -3,11 +3,12 @@ use strict;
 use warnings;
 use utf8;
 use 5.010;
-use POSIX qw(strftime);
 
-open my $fh, ">", "release-$ENV{PERL_VERSION}.txt" or die;
+say "-------> \%ENV";
+say "$_: $ENV{$_}" for sort keys %ENV;
 
-print {$fh} strftime("%F %T %z", localtime), "\n";
-print {$fh} "ARGV$_: $ARGV[$_]\n" for 0..$#ARGV;
-
+say "-------> $^X -V";
+system "$^X -V";
+say "-------> sw_vers";
+system "sw_vers";
 
